@@ -1,0 +1,22 @@
+.App {
+  margin: 0 150px;
+}
+
+.pets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  text-align: center;
+}
+
+.pet-card {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
