@@ -8,9 +8,6 @@ const Header = () => {
       <img className={css.img} src='../img/hbLog.png' alt='logoNav' />
       <nav>
         <NavLink className={css['nav-link']} to='/'>
-          Home
-        </NavLink>
-        <NavLink className={css['nav-link']} to='/pets'>
           Pets
         </NavLink>
         <NavLink className={css['nav-link']} to='/Medication'>
