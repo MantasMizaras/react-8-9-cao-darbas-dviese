@@ -3,7 +3,8 @@ import css from './Header.module.css';
 function Header() {
   return (
     <header className={css.header}>
-      <nav className='main-nav'>
+      <nav className={css['main-nav']}>
+        <img src='../img/hbLog.png' alt='logoNav' />
         <a className={css['nav-link']} href='#home'>
           Home
         </a>
