@@ -1,13 +1,23 @@
+import { Route, Switch } from 'react-router-dom';
+
 import './App.css';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
+import HealthLogPage from './pages/HealthLogPage';
+import PetListPage from './pages/PetListPage';
 
 function App() {
   return (
     <div className='App'>
       <Header />
-      <h1>Heloo again world</h1>
-      <h2>hey</h2>
+      <Switch>
+        <Route path='/logs'>
+          <HealthLogPage />
+        </Route>
+        <Route exact path='/'>
+          <PetListPage />
+        </Route>
+      </Switch>
       <Footer />
     </div>
   );
