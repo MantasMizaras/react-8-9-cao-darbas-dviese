@@ -1,19 +1,24 @@
 import css from './Header.module.css';
 
-function Header() {
+import { NavLink } from 'react-router-dom';
+
+const Header = () => {
   return (
     <header className={css.header}>
       <img className={css.img} src='../img/hbLog.png' alt='logoNav' />
-      <nav className={css['main-nav']}>
-        <a className={css['nav-link']} href='#pets'>
+      <nav>
+        <NavLink className={css['nav-link']} to='/'>
+          Home
+        </NavLink>
+        <NavLink className={css['nav-link']} to='/pets'>
           Pets
-        </a>
-        <a className={css['nav-link']} href='#medication'>
+        </NavLink>
+        <NavLink className={css['nav-link']} to='/Medication'>
           Medication
-        </a>
+        </NavLink>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
