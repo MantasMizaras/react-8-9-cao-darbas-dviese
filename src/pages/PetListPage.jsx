@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import SinglePetCard from '../petList/SinglePetCard';
 
+import { NavLink } from 'react-router-dom';
+
 const PetListPage = () => {
   const [petsArr, setPetsArr] = useState([]);
 
@@ -24,7 +26,9 @@ const PetListPage = () => {
     <div>
       <div className='pets-header'>
         <h1>Pet List</h1>
-        <button>Add Pet</button>
+        <NavLink to='/AddPet'>
+          <button>Add Pet</button>
+        </NavLink>
       </div>
       <div className='pets-grid'>
         {petsArr.map((pObj) => (
