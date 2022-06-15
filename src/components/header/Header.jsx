@@ -3,21 +3,15 @@ import css from './Header.module.css';
 function Header() {
   return (
     <header className={css.header}>
+      <img className={css.img} src='../img/hbLog.png' alt='logoNav' />
       <nav className={css['main-nav']}>
-        <img src='../img/hbLog.png' alt='logoNav' />
-        <a className={css['nav-link']} href='#home'>
-          Home
+        <a className={css['nav-link']} href='#pets'>
+          Pets
         </a>
-        <a className={css['nav-link']} href='#about'>
-          About
-        </a>
-        <a className={css['nav-link']} href='#contact'>
-          Contact
+        <a className={css['nav-link']} href='#medication'>
+          Medication
         </a>
       </nav>
-      <a className={css['nav-link']} href='#search'>
-        Search
-      </a>
     </header>
   );
 }
