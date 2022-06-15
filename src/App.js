@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import HealthLogPage from './pages/HealthLogPage';
+import MedicationPage from './pages/MedicationPage';
 import PetListPage from './pages/PetListPage';
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
     <div className='App'>
       <Header />
       <Switch>
-        <Route path='/logs'>
-          <HealthLogPage />
+        <Route path='/Medication'>
+          <MedicationPage />
         </Route>
         <Route exact path='/'>
           <PetListPage />
