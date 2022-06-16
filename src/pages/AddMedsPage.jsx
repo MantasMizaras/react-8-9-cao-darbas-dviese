@@ -72,7 +72,7 @@ const AddMedsPage = () => {
     }
     postDrugs();
 
-    console.log('petObj ===', drugObj);
+    console.log(drugObj);
     // clear inputs
     setNameValue('');
     setDescValue('');

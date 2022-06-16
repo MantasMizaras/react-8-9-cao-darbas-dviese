@@ -1,9 +1,16 @@
 .copyright {
-  text-align: center;
+  /* text-align: center;
   position: inherit;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
   margin-top: 2rem;
-  color: rgb(2, 55, 58);
+  color: rgb(2, 55, 58); */
+
+  position: fixed;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  color: rgb(214, 199, 177);
 }
