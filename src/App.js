@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
+import AddMedsPage from './pages/AddMedsPage';
 import AddPetPage from './pages/AddPetPage';
 import MedicationPage from './pages/MedicationPage';
 import PetListPage from './pages/PetListPage';
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path='/AddPet'>
           <AddPetPage />
+        </Route>
+        <Route path='/AddMed'>
+          <AddMedsPage />
         </Route>
         <Route exact path='/'>
           <PetListPage />

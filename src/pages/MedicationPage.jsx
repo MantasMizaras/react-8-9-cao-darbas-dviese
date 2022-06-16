@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import SingleMedCard from '../medList/SingleMedCard';
 
 const MedicationPage = () => {
@@ -23,7 +24,9 @@ const MedicationPage = () => {
     <div>
       <div className='pets-header'>
         <h1>Medicament List</h1>
-        <button>Add Medicament</button>
+        <NavLink to='/AddMed'>
+          <button>Add Medicament</button>
+        </NavLink>
       </div>
       <div className='pets-grid'>
         {medsArr.map((pObj) => (
