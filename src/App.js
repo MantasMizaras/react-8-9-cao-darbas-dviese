@@ -6,20 +6,24 @@ import Header from './components/header/Header';
 import AddPetPage from './pages/AddPetPage';
 import MedicationPage from './pages/MedicationPage';
 import PetListPage from './pages/PetListPage';
+import SinglePetPage from './pages/SinglePetPage';
 
 function App() {
   return (
     <div className='App'>
       <Header />
       <Switch>
+        <Route path='/pets/:petId'>
+          <SinglePetPage />
+        </Route>
         <Route path='/Medication'>
           <MedicationPage />
         </Route>
-        <Route exact path='/'>
-          <PetListPage />
-        </Route>
         <Route path='/AddPet'>
           <AddPetPage />
+        </Route>
+        <Route exact path='/'>
+          <PetListPage />
         </Route>
       </Switch>
       <Footer />

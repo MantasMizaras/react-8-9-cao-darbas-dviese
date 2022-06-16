@@ -6,7 +6,7 @@ const SinglePetCard = (props) => {
       <h2>{props.name}</h2>
       <p>{new Date(props.dob).toLocaleDateString()}</p>
       <p>{props.client_email}</p>
-      <Link to={`https://glittery-dull-snickerdoodle.glitch.me/v1/logs/${props.id}`}>
+      <Link to={`/pets/${props.id}`}>
         <button>View Log</button>
       </Link>
       <button>Delete</button>
