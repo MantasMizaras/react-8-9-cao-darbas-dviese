@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SinglePetPage = () => {
   const [currentPet, setCurrentPet] = useState({});
@@ -17,7 +17,17 @@ const SinglePetPage = () => {
     getCurrentPetAndSave();
   }, []);
 
-  return <div>SinglePetPage</div>;
+  return (
+    <div className='pet-card'>
+      <h2>{currentPet.name}</h2>
+      <p>{new Date(currentPet.dob).toLocaleDateString()}</p>
+      <p>{currentPet.client_email}</p>
+      <Link to={`https://glittery-dull-snickerdoodle.glitch.me/v1/logs/${currentPet.id}`}>
+        <button>View Log</button>
+      </Link>
+      <button>Delete</button>
+    </div>
+  );
 };
 
 export default SinglePetPage;
