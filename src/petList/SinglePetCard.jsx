@@ -9,7 +9,7 @@ const SinglePetCard = (props) => {
       <Link to={`/pets/${props.id}`}>
         <button>View Log</button>
       </Link>
-      <button>Delete</button>
+      <button onClick={() => props.onDelete(props.id)}>Delete</button>
     </div>
   );
 };

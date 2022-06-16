@@ -7,7 +7,7 @@ const PetListPage = () => {
   const [petsArr, setPetsArr] = useState([]);
 
   const getPetsAndSetState = async () => {
-    const resp = await fetch('/db/pets.json');
+    const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/pets');
     const dataInJs = await resp.json();
     const onlyDataWeNeed = dataInJs.map(({ id, name, dob, client_email }) => ({
       id,
@@ -16,6 +16,17 @@ const PetListPage = () => {
       client_email,
     }));
     setPetsArr(onlyDataWeNeed);
+  };
+
+  const deletePetById = async (id) => {
+    const resp = await fetch(`https://glittery-dull-snickerdoodle.glitch.me/v1/pets/${id}`, {
+      method: 'DELETE',
+    });
+    console.log('resp ===', resp);
+    const data = await resp.json();
+    if (data.changes === 1) {
+      getPetsAndSetState();
+    }
   };
 
   useEffect(() => {
@@ -32,7 +43,7 @@ const PetListPage = () => {
       </div>
       <div className='pets-grid'>
         {petsArr.map((pObj) => (
-          <SinglePetCard key={pObj.id} {...pObj} />
+          <SinglePetCard onDelete={deletePetById} key={pObj.id} {...pObj} />
         ))}
       </div>
     </div>
