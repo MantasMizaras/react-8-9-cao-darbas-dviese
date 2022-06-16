@@ -7,7 +7,7 @@ const SinglePetPage = () => {
   const { petId } = useParams();
 
   const getCurrentPetAndSave = async () => {
-    const resp = await fetch('/db/pets.json');
+    const resp = await fetch('https://glittery-dull-snickerdoodle.glitch.me/v1/pets');
     const dataInJs = await resp.json();
     const currentPet = dataInJs.find(({ id }) => id === +petId);
     setCurrentPet(currentPet);
